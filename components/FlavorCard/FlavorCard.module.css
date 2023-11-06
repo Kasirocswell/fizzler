@@ -1,0 +1,37 @@
+/* components/FlavorCard/FlavorCard.module.css
+.flavorCard {
+    Add general card styles and animations
+  }
+  
+  .flavorName {
+    Style for the flavor name text
+  }
+  
+  .flavorDescription {
+    Style for the flavor description text
+  } */
+  
+  .blue {
+    background-color: #a2d2ff; /* Replace with the exact color code for your brand */
+  }
+  
+  .pink {
+    background-color: #ffb6b9; /* Replace with the exact color code for your brand */
+  }
+  
+  .yellow {
+    background-color: #fdffb6; /* Replace with the exact color code for your brand */
+  }
+  
+  .purple {
+    background-color: #b6a6ff; /* Replace with the exact color code for your brand */
+  }
+  
+  .red {
+    background-color: #ffadad; /* Replace with the exact color code for your brand */
+  }
+  
+  .green {
+    background-color: #caffbf; /* Replace with the exact color code for your brand */
+  }
+  
