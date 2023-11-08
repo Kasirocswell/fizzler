@@ -2,11 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* globals.css */
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --blue: #2c4bff; /* Example brand color for blue */
+  --pink: #ff2bc2; /* Example brand color for pink */
+  --green: #4aff2b; /* Example brand color for green */
+  /* Add more brand colors as needed */
 }
+
 
 @media (prefers-color-scheme: dark) {
   :root {
