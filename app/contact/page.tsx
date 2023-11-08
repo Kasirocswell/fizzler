@@ -45,7 +45,7 @@ const Contact: NextPage = () => {
           <h2 className={`text-3xl md:text-4xl font-bold text-black mb-6 ${arvo.className}`}>Visit Us</h2>
           <div className="w-full md:w-2/3 lg:w-1/2 mb-6">
             {/* Embed a map iframe or use a static image of the map */}
-            <img src="/red.png" alt="Map to Fizzler" className="rounded-xl" />
+            <img src="/red.png" alt="Map to Fizzler" className="rounded-xl mx-auto" />
           </div>
           <p className={`text-lg text-black mb-6 ${poppins.className}`}>
             Planning to visit our headquarters? Find us on the map and come say hello!

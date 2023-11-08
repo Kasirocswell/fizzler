@@ -2,25 +2,25 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { IconMenu2 } from '@tabler/icons-react';
+import { IconMenu2 } from "@tabler/icons-react";
 import styles from './Navbar.module.css'; 
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const navItems = [
-    { href: '/about', label: 'About', color: 'var(--blue)' }, // Blue
-    { href: '/flavors', label: 'Flavors', color: 'var(--pink)' }, // Pink
-    { href: '/contact', label: 'Contact', color: 'var(--green)' }, // Green
+    { href: '/about', label: 'About', color: 'var(--blue)' },
+    { href: '/flavors', label: 'Flavors', color: 'var(--pink)' },
+    { href: '/contact', label: 'Contact', color: 'var(--green)' },
     // Add more items here
   ];
 
   return (
     <nav className="bg-white shadow-lg">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Website Logo */}
-          <a href="/" className="flex items-center py-4 px-2">
+          <a href="/" className="flex items-center py-4 mr-4">
             <Image src="/tlogo.png" alt="Logo" width={100} height={100} />
           </a>
           {/* Primary Navbar items */}
@@ -38,8 +38,8 @@ const Navbar: React.FC = () => {
           </div>
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
-            <button type="button" onClick={() => setIsOpen(!isOpen)}>
-              <IconMenu2 size={30} />
+            <button type="button" onClick={() => setIsOpen(!isOpen)} className="text-black focus:outline-none">
+              <IconMenu2 size={30} stroke={1.5} />
             </button>
           </div>
         </div>
