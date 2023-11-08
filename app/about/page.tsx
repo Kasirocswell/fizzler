@@ -29,7 +29,7 @@ const About: NextPage = () => {
         {/* About Section */}
         <section className="w-full py-16 flex flex-col md:flex-row items-center justify-center text-center md:text-left px-4 bg-white">
           <div className="md:w-1/2 mb-4 md:mb-0">
-            <Image src="/tlogo.png" alt="Fizzler Logo" width={150} height={150} layout="responsive" />
+            <Image src="/bottle-red.png" alt="Fizzler Logo" width={150} height={150} layout="responsive" />
           </div>
           <div className="md:w-1/2">
             <h2 className={`text-3xl md:text-4xl font-bold text-black mb-6 ${arvo.className}`}>About Fizzler</h2>

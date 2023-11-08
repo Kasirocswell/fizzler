@@ -1,16 +1,36 @@
 /* Navbar.module.css */
 
 @keyframes slideDown {
-    from {
-      transform: translateY(-10px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
   }
-  
-  .mobileMenuEnter {
-    animation: slideDown 0.5s ease forwards;
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
+}
+
+.mobileMenuEnter {
+  animation: slideDown 0.5s ease forwards;
+}
+
+.navLink {
+  --s: 0.1em; /* Thickness of the underline */
+  color: black; /* Default text color */
+  background-image: linear-gradient(currentColor, currentColor), linear-gradient(transparent, transparent);
+  background-size: 0 2px, 100% 2px; /* Initial background size */
+  background-repeat: no-repeat;
+  background-position: 0 100%, 0 100%;
+  transition: background-size 0.5s ease, color 0.5s ease; /* Transition for the background size and color */
+  cursor: pointer; /* Changes the cursor to indicate the item is clickable */
+  text-decoration: none; /* Removes the default text underline */
+}
+
+.navLink:hover {
+  background-size: 100% 2px, 100% 2px; /* Background size on hover */
+  color: var(--c, black); /* Text color on hover, fallback to black */
+}
+
+/* Define your brand colors as CSS variables */
+
