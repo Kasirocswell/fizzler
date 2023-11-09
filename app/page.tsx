@@ -25,7 +25,7 @@ const Home: NextPage = () => {
       <main className="bg-white">
         {/* Hero Section */}
         <Hero bgImage="/soda.gif" titleImage="/fruit-yellow.png" />
-
+        <div id="modal-root"></div>
 
         {/* Refresh Naturally Section */}
         <section className="w-full py-16 flex flex-col items-center justify-center text-center px-4 bg-white">
