@@ -1,34 +1,49 @@
 // components/FlavorCard/FlavorCard.tsx
-import React from 'react';
-import styles from './FlavorCard.module.css'; // We'll create this CSS Module for animations and more specific styles
+import React, { useState } from 'react';
+import Modal from '../Modal/Modal'; // Import the Modal component
+import styles from './FlavorCard.module.css';
 
 export interface Flavor {
-    name: string;
-    color: string;
-    description: string;
-  }
+  name: string;
+  color: string;
+  description: string;
+}
 
-  interface FlavorCardProps {
-    flavor: Flavor;
-  }
-  
-  const FlavorCard: React.FC<FlavorCardProps> = ({ flavor }) => {
-    // Construct the image path based on the flavor color
-    const imagePath = `/${flavor.color}.png`; // Adjust the path if your images are in a different directory
-  
-    return (
-      <div className={`p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ${styles.flavorCard}`}>
+interface FlavorCardProps {
+  flavor: Flavor;
+}
+
+const FlavorCard: React.FC<FlavorCardProps> = ({ flavor }) => {
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const imagePath = `/${flavor.color}.png`;
+
+  const toggleModal = () => {
+    setIsModalVisible(!isModalVisible);
+  };
+
+  return (
+    <>
+      <div
+        className={`p-4 rounded-lg shadow-lg transition-shadow duration-300 ${styles.flavorCard}`}
+        onClick={toggleModal} // Toggle modal on click
+      >
         <div className={`rounded-lg p-6 flex flex-col items-center justify-center text-center ${styles[flavor.color]}`}>
-          {/* Image */}
           <img src={imagePath} alt={flavor.name} className="w-full h-auto rounded-lg mb-4" />
-          
-          {/* Title */}
           <h3 className={`text-2xl font-bold mb-3 ${styles.flavorName}`}>{flavor.name}</h3>
-          
-          {/* Description */}
           <p className={styles.flavorDescription}>{flavor.description}</p>
         </div>
       </div>
-    );
-  };
+
+      {/* Modal */}
+      {isModalVisible && (
+        <Modal show={isModalVisible} onClose={toggleModal}>
+          <h3 className={`text-2xl font-bold mb-3 ${styles.flavorName}`}>{flavor.name}</h3>
+          <img src={imagePath} alt={flavor.name} className="w-full h-auto rounded-lg mb-4" />
+          <p className={styles.flavorDescription}>{flavor.description}</p>
+        </Modal>
+      )}
+    </>
+  );
+};
+
 export default FlavorCard;
